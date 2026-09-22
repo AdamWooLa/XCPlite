@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: tools/shared_shell_helpers
+title: 共享内存模式辅助工具脚本
+scope:
+    - tools/shm_clean.sh
+    - tools/shm_cleanup.sh
+    - tools/shm_finalize.sh
+    - tools/shm_status.sh
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/shared_memory

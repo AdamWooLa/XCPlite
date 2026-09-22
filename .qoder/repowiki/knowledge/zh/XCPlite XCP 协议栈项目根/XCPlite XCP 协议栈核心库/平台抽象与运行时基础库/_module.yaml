@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: core_library/platform_and_runtime
+title: 平台抽象与运行时基础库
+scope:
+    - src/platform.c
+    - src/platform.h
+    - src/util.c
+    - src/util.h
+    - src/dbg_print.h
+    - src/queue.h
+    - src/queue32.c
+    - src/queue32m.c
+    - src/queue64f.c
+    - src/queue64v.c
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/transport_layer

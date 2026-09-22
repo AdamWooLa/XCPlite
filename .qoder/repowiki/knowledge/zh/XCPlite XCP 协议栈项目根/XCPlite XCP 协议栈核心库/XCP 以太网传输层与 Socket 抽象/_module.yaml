@@ -1,0 +1,19 @@
+schema_version: 1
+module_path: core_library/transport_layer
+title: XCP 以太网传输层与 Socket 抽象
+scope:
+    - src/sockets.c
+    - src/sockets.h
+    - src/socket_raw.c
+    - src/socket_raw_hal.h
+    - src/socket_raw_hal_linux.c
+    - src/xcpethserver.c
+    - src/xcpethserver.h
+    - src/xcpethtl.c
+    - src/xcpethtl.h
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/a2l_writer
+    - path: core_library/platform_and_runtime
+    - path: core_library/xcp_protocol_core

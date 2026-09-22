@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: core_library/shared_memory
+title: 共享内存多进程XCP会话管理
+scope:
+    - src/shm.c
+    - src/shm.h
+    - src/xcpshmserver.h
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/xcp_protocol_core
+    - path: tools/shared_shell_helpers

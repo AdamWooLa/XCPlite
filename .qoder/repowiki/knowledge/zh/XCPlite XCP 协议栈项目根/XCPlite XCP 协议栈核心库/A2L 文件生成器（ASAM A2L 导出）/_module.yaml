@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: core_library/a2l_writer
+title: A2L 文件生成器（ASAM A2L 导出）
+scope:
+    - src/a2l.c
+    - src/a2l_writer.c
+    - src/a2l_writer.h
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/transport_layer
+    - path: core_library/xcp_protocol_core

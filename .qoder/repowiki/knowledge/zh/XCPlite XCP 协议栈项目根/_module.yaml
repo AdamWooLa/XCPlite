@@ -1,0 +1,18 @@
+schema_version: 1
+module_path: ""
+title: XCPlite XCP 协议栈项目根
+scope:
+    - README.md
+    - CLAUDE.md
+    - .clang-format
+    - .clang-tidy
+    - .gitignore
+    - CMakeLists.txt
+    - XCP_104.aml
+    - cmake/
+    - inc/
+    - CHANGELOG.md
+    - LICENSE
+source_files: []
+depends_on: []
+related_to: []

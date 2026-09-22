@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: tests
+title: XCPlite 集成测试与示例验证套件
+scope:
+    - test/
+source_files: []
+depends_on: []
+related_to:
+    - path: examples

@@ -1,0 +1,180 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: master
+nodes_managed: true
+exported_at: "2026-09-22T09:46:39Z"
+modules:
+    "":
+        dir_name: XCPlite XCP 协议栈项目根
+        title: XCPlite XCP 协议栈项目根
+        scope:
+            - README.md
+            - CLAUDE.md
+            - .clang-format
+            - .clang-tidy
+            - .gitignore
+            - CMakeLists.txt
+            - XCP_104.aml
+            - cmake/
+            - inc/
+            - CHANGELOG.md
+            - LICENSE
+        source_files: []
+        children:
+            - core_library
+            - documentation
+            - examples
+            - tests
+            - tools
+        depends_on: []
+        related_to: []
+    core_library:
+        dir_name: XCPlite XCP 协议栈核心库
+        title: XCPlite XCP 协议栈核心库
+        scope:
+            - src/
+        source_files: []
+        children:
+            - core_library/a2l_writer
+            - core_library/platform_and_runtime
+            - core_library/shared_memory
+            - core_library/transport_layer
+            - core_library/xcp_protocol_core
+        depends_on: []
+        related_to: []
+    core_library/a2l_writer:
+        dir_name: A2L 文件生成器（ASAM A2L 导出）
+        title: A2L 文件生成器（ASAM A2L 导出）
+        scope:
+            - src/a2l.c
+            - src/a2l_writer.c
+            - src/a2l_writer.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/transport_layer
+            - path: core_library/xcp_protocol_core
+    core_library/platform_and_runtime:
+        dir_name: 平台抽象与运行时基础库
+        title: 平台抽象与运行时基础库
+        scope:
+            - src/platform.c
+            - src/platform.h
+            - src/util.c
+            - src/util.h
+            - src/dbg_print.h
+            - src/queue.h
+            - src/queue32.c
+            - src/queue32m.c
+            - src/queue64f.c
+            - src/queue64v.c
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/transport_layer
+    core_library/shared_memory:
+        dir_name: 共享内存多进程XCP会话管理
+        title: 共享内存多进程XCP会话管理
+        scope:
+            - src/shm.c
+            - src/shm.h
+            - src/xcpshmserver.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/xcp_protocol_core
+            - path: tools/shared_shell_helpers
+    core_library/transport_layer:
+        dir_name: XCP 以太网传输层与 Socket 抽象
+        title: XCP 以太网传输层与 Socket 抽象
+        scope:
+            - src/sockets.c
+            - src/sockets.h
+            - src/socket_raw.c
+            - src/socket_raw_hal.h
+            - src/socket_raw_hal_linux.c
+            - src/xcpethserver.c
+            - src/xcpethserver.h
+            - src/xcpethtl.c
+            - src/xcpethtl.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/a2l_writer
+            - path: core_library/platform_and_runtime
+            - path: core_library/xcp_protocol_core
+    core_library/xcp_protocol_core:
+        dir_name: XCP 协议层核心实现（XCPlite）
+        title: XCP 协议层核心实现（XCPlite）
+        scope:
+            - src/xcp.h
+            - src/xcp_cfg.h
+            - src/xcplite.c
+            - src/xcplite.h
+            - src/xcpappl.c
+            - src/xcptl.h
+            - src/xcptl_cfg.h
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/a2l_writer
+            - path: core_library/shared_memory
+            - path: core_library/transport_layer
+    documentation:
+        dir_name: XCPlite 项目文档集
+        title: XCPlite 项目文档集
+        scope:
+            - docs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    examples:
+        dir_name: XCPlite 示例工程集合
+        title: XCPlite 示例工程集合
+        scope:
+            - examples/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: tests
+    tests:
+        dir_name: XCPlite 集成测试与示例验证套件
+        title: XCPlite 集成测试与示例验证套件
+        scope:
+            - test/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: examples
+    tools:
+        dir_name: XCP 调试与工具集
+        title: XCP 调试与工具集
+        scope:
+            - tools/
+        source_files: []
+        children:
+            - tools/shared_shell_helpers
+        depends_on: []
+        related_to: []
+    tools/shared_shell_helpers:
+        dir_name: 共享内存模式辅助工具脚本
+        title: 共享内存模式辅助工具脚本
+        scope:
+            - tools/shm_clean.sh
+            - tools/shm_cleanup.sh
+            - tools/shm_finalize.sh
+            - tools/shm_status.sh
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core_library/shared_memory

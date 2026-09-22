@@ -1,0 +1,17 @@
+schema_version: 1
+module_path: core_library/xcp_protocol_core
+title: XCP 协议层核心实现（XCPlite）
+scope:
+    - src/xcp.h
+    - src/xcp_cfg.h
+    - src/xcplite.c
+    - src/xcplite.h
+    - src/xcpappl.c
+    - src/xcptl.h
+    - src/xcptl_cfg.h
+source_files: []
+depends_on: []
+related_to:
+    - path: core_library/a2l_writer
+    - path: core_library/shared_memory
+    - path: core_library/transport_layer
